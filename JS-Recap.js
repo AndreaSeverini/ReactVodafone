@@ -181,3 +181,12 @@ const myObj = {
     age=28
 }
 const {n, sn} = myObj;
+
+/* ------------------ ARRAY MAP METHOD ---------------------
+
+----------------------------------------------------------*/
+const numbers = [1, 2, 3];
+const doubleNumArray = numbers.map((num) => {
+    //executed on each element and return a new array
+    return num*2;
+});
