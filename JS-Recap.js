@@ -136,3 +136,33 @@ class Person extends Human {
     console.log(this.name);
   };
 }
+
+/* ------------- SPREAD & REST OPERATOR --------------------
+SPREAD --> used to split up array elements or obj properties
+    const newArray = [...oldArray, 1, 2]
+    const newObj = {...oldObj, newProp: 5}
+REST --> used to merge a list of fnct arguments into an array
+    function sortArgs(..args) {
+        return args.sort()
+    }
+----------------------------------------------------------*/
+const numbers = [1, 3, 4];
+const newNumbers = [...numbers, 5, 6];
+console.log(newNumbers);
+
+const person = {
+  name: "Max",
+};
+
+const newPerson = {
+  ...person,
+  age: 28,
+};
+console.log(newPerson);
+
+//rest operator that merge args in an array
+const filter = (...args) => {
+  //return only element equal to 1 if it is a number
+  return args.filter((el) => el === 1);
+};
+console.log(filter(1, 2, 3));
