@@ -42,3 +42,25 @@ printMyNameArrow("Andrea Severini");
 //smarter syntax
 const multiply = (number) => number * 2;
 console.log(multiply(2));
+
+/* ------------- EXPORTS & IMPORTS (MODULES) ---------------
+splitting up js in modular files
+
+const person = {
+    name: 'Andrea'
+}
+export default person
+
+export const clean = () => {}
+export const baseData = 10;
+
+-->
+import person from './person.js'
+import prs from './person.js'
+
+import { baseData } from './utility.js'
+import { clean } from './utility.js'
+import { clean as cln } from './utility.js'
+import * as bundled from './utility.js' 
+exported ad an object with properties
+----------------------------------------------------------*/
