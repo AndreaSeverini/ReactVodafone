@@ -166,3 +166,18 @@ const filter = (...args) => {
   return args.filter((el) => el === 1);
 };
 console.log(filter(1, 2, 3));
+
+/* ------------------ DESTRUCTURING ------------------------
+easily extract array elements or object properties and
+store them in variables
+----------------------------------------------------------*/
+const numbers = [1, 2, 3];
+[num1, num2] = numbers;
+console.log(num1, num2);
+
+const myObj = {
+    name = 'Andrea',
+    surname = 'Severini',
+    age=28
+}
+const {n, sn} = myObj;
