@@ -64,3 +64,75 @@ import { clean as cln } from './utility.js'
 import * as bundled from './utility.js' 
 exported ad an object with properties
 ----------------------------------------------------------*/
+
+/* -------------------- CLASSES ----------------------------
+--> DEFINITION
+class Person {
+    name = 'Andrea'   <--property
+    call = () => {..} <-- method
+}
+
+--> USAGE
+const myPerson = new Person()
+myPerson.call()
+console.log(myPerson.name)
+
+--> INHERITANCE 
+class Person extends Master 
+----------------------------------------------------------*/
+class Person {
+  constructor() {
+    this.name = "Andrea";
+  }
+
+  printName() {
+    console.log(this.name);
+  }
+}
+
+const person = new Person();
+person.printName();
+
+class Human {
+  constructor() {
+    this.gender = "male";
+  }
+
+  printGender() {
+    console.log(this.gender);
+  }
+}
+
+class Person2 extends Human {
+  constructor(props) {
+    super(props);
+    this.name = "Andrea";
+  }
+
+  printName() {
+    console.log(this.name);
+  }
+}
+
+const person2 = new Person2();
+person2.printGender();
+person2.printName();
+
+//other methods (MODERN)
+
+class Human {
+  gender = "Male";
+
+  printGender = () => {
+    console.log(this.gender);
+  };
+}
+
+class Person extends Human {
+  name = "Andrea";
+  gender = "Female";
+
+  printName = () => {
+    console.log(this.name);
+  };
+}
